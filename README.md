@@ -13,7 +13,7 @@ WhatsApp group  →  ha-whatsapp integration  →  Home Assistant automation  �
 - Generic ESP32 board
 - ST7735 SPI TFT display (128x160)
 - Passive buzzer
-- Push button
+- Push button  (just to run a few actions if you want)
 
 ### Wiring
 
