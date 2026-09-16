@@ -1,0 +1,14 @@
+# Add this to your configuration.yaml, or recreate these as UI helpers
+# under Settings > Devices & Services > Helpers.
+
+input_text:
+  screen_text:
+    name: Screen Text
+    max: 255
+
+input_select:
+  screen_image:
+    name: Screen Image
+    options:
+      - "None"
+      - "Darth Vader"

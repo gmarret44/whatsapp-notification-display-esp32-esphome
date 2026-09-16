@@ -1,0 +1,29 @@
+# WhatsApp group message -> ESP32 display
+#
+# Requires the FaserF/ha-whatsapp integration:
+# https://github.com/FaserF/ha-whatsapp
+#
+# Update the following before use:
+#   - entity_id of your "messages received" sensor
+#   - the WhatsApp group ID in the condition (find it via the
+#     integration's built-in group ID discovery tool)
+
+- alias: "WhatsApp - Group message to display"
+  description: "Copies the latest message from a specific WhatsApp group to the display's input_text"
+  trigger:
+    - platform: state
+      entity_id: sensor.whatsapp_XXXXXXXXXXX_messages_received
+  condition:
+    - condition: template
+      value_template: >-
+        {{ state_attr('sensor.whatsapp_XXXXXXXXXXX_messages_received', 'last_sender') == '123456789@g.us' }}
+  action:
+    - service: input_text.set_value
+      target:
+        entity_id: input_text.screen_text
+      data:
+        value: "{{ state_attr('sensor.whatsapp_XXXXXXXXXXX_messages_received', 'last_message') }}"
+    - service: button.press
+      target:
+        entity_id: button.buzzer_notification
+  mode: single
