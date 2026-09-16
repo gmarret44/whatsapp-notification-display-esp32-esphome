@@ -1,4 +1,4 @@
-# WhatsApp Notification Display
+# WhatsApp Notification Display esp32 esphome
 
 A small ESP32-based display that shows the latest WhatsApp group message on a physical screen, with a sound alert on a passive buzzer — powered by Home Assistant and [ESPHome](https://esphome.io/).
 
