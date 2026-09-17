@@ -28,7 +28,7 @@ WhatsApp group  →  ha-whatsapp integration  →  Home Assistant automation  �
 | Buzzer          | GPIO16 |
 
 
-(wired_image.png)
+![Texte alternatif](wired_image.jpg)
 
 > ⚠️ GPIO15 is an ESP32 strapping pin. The push button works fine, but avoid adding external pull-up/pull-down resistors on it — this can interfere with boot.
 
